@@ -1,7 +1,7 @@
 FROM node
 LABEL maintainer="ing.fernandez.angel@outlook.com"
-LABEL creation="10/05/20"
-LABEL release="version 10-05-20 1.0"
+LABEL creation="24/05/20"
+LABEL release="version 24-05-20 1.0"
 
 WORKDIR /var/prueba
 
