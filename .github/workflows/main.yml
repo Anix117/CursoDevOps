@@ -12,9 +12,13 @@ jobs:
     - name: Saludos
       run: echo Hola cuando se hace push!
     - name: multiline
+      env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
       run: |
         docker -v
         docker build . -t anix117/gitactnodejs:200524
         docker images
-        docker run -d anix117/gitactnodejs:200524
-        docker ps -a
+        echo 'Docker login'
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+        docker push anix117/gitactnodejs:200524
