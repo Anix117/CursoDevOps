@@ -18,6 +18,7 @@ jobs:
       run: |
         docker -v
         docker build . -t anix117/gitactnodejs:200524
+        docker pull serafodevops/gitactnodeimage:240520
         docker images
         echo 'Docker login'
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
