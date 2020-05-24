@@ -16,3 +16,5 @@ jobs:
         docker -v
         docker build . -t anix117/gitactnodejs:200524
         docker images
+        docker run anix117/gitactnodejs:200524
+        docker ps -a
